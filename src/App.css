@@ -21,3 +21,11 @@
   width: 5vw;
   border-radius: 1px;
 }
+.toDo {
+  background-color: burlywood;
+  border-style: solid;
+  border-color: cadetblue;
+  border-width: thin;
+  padding: 20px;
+  margin: 0px;
+}

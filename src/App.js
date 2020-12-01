@@ -8,16 +8,16 @@ class App extends React.Component {
   };
   storeValue = () => {};
   addText = () => {
-    const { userInput, text } = this.state;
+    const { userInput } = this.state;
+    const { text } = this.state;
     var newText = [];
-
-    text.forEach((item) => {
-      newText.push(item);
-    });
     newText.push(userInput);
     this.setState({
       text: newText,
       userInput: "",
+    });
+    text.forEach((item) => {
+      newText.push(item);
     });
   };
   updateUserInput = (event) => {
@@ -44,7 +44,7 @@ class App extends React.Component {
         <div className="list">
           <div>
             {this.state.text.map((toDo) => {
-              return <p>{toDo}</p>;
+              return <p className="toDo">{toDo}</p>;
             })}
           </div>
         </div>
